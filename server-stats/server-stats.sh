@@ -22,13 +22,16 @@ print_empty_lines 2
 ##Total memory usage (Free vs Used including percentage)
 print_header "Total Memory Usage"
 total_mem=$(free -m | awk '/^Mem/ {print $2}')
+total_mem_gb=$(echo "scale=2; $total_mem / 1024" | bc)
 used_mem=$(free -m | awk '/^Mem/ {print $3}')
-free_mem=$(free -m | awk '/^Mem/ {print $4 + $6 + $7}')
+free_mem=$(free -m | awk '/^Mem/ {print $7}')
+used_mem_gb=$(echo "scale=2; $used_mem / 1024" | bc)
+used_mem_percent=$(echo "scale=2; ($used_mem / $total_mem) * 100" | bc)
 free_mem_gb=$(echo "scale=2; $free_mem / 1024" | bc)
 free_mem_percent=$(echo "scale=2; ($free_mem / $total_mem) * 100" | bc)
 
-echo "Total Memory: $total_mem "
-echo "Used Memory: $used_mem"
+echo "Total Memory: ${total_mem_gb}GB "
+echo "Used Memory: ${used_mem_gb}GB (${used_mem_percent}%)"
 echo "Free Memory: ${free_mem_gb}GB (${free_mem_percent}%)"
 
 print_empty_lines 2
