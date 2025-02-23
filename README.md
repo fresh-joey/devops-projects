@@ -10,6 +10,6 @@ Each project has its own directory properly named, and has a READme for instruct
 
 ## Projects Completed
 
-1. [Server Performance Stats](https://roadmap.sh)
+1. [Server Performance Stats](https://roadmap.sh/projects/server-stats)
 
 All the projects are available at <https://roadmap.sh>
