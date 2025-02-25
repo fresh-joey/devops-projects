@@ -9,11 +9,13 @@
 The tool should run from the command line, accept the log directory as an argument, compress the logs, and store them in a new directory. The user should be able to:
 
 - Provide the log directory as an argument when running the tool.
-```Bash
+```bash
 log-archive <log-directory>
 ```
-The tool should compress the logs in a tar.gz file and store them in a new directory.
-The tool should log the date and time of the archive to a file.
+- The tool should compress the logs in a tar.gz file and store them in a new directory.
+- The tool should log the date and time of the archive to a file.
+```console
 logs_archive_20240816_100648.tar.gz
+```
 
 ## Usage
