@@ -14,4 +14,8 @@
 
 - ./log-analyser.sh
 
+```console
+Note: The log file is included in the project
+```
+
 Project URL: <https://roadmap.sh/projects/nginx-log-analyser>
