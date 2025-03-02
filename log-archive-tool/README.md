@@ -3,19 +3,26 @@
 ## Description
 
 - The Log Archive Tool is a shell script designed to archive log files from a specified directory. This tool helps in managing log files by compressing and moving them to an archive directory, thus saving disk space and keeping the log directory organized.
+- The script takes 2 inputs, the directory to be archived and the directory where the archive is to be stored.
 
-## Requirements
+## Instructions
 
-The tool should run from the command line, accept the log directory as an argument, compress the logs, and store them in a new directory. The user should be able to:
+### Clone the repository and change directory
 
-- Provide the log directory as an argument when running the tool.
-```bash
-log-archive <log-directory>
-```
-- The tool should compress the logs in a tar.gz file and store them in a new directory.
-- The tool should log the date and time of the archive to a file.
+- git clone <https://github.com/fresh-joey/devops-projects.git>
+
+- cd devops-projects/log-archive-tool
+
+### Add executable permission to the script
+
 ```console
-logs_archive_20240816_100648.tar.gz
+- chmod +x log-archive.sh
 ```
 
-## Usage
+### Run the script on the terminal
+
+```console
+- ./log-archive.sh
+```
+
+Project URL: <https://roadmap.sh/projects/log-archive-tool>
