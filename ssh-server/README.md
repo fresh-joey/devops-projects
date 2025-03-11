@@ -84,7 +84,7 @@ ssh testserver
 ```
 - You should be logged in to the server just like in the previous step
 
-## Install and Configure Fail2ba
+## Install and Configure Fail2ban
 
 - Login to your server through any means discussed above
 - Update server and install fail2ban
@@ -98,11 +98,11 @@ sudo systemctl status fail2ban
 ```
 
 - Copy the default configuration file to a local file for customization
-```bash
+```console
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 - Open the jail.local file for editing
-```bash
+```console
 sudo nano /etc/fail2ban/jail.local
 ```
 - In the jail.local file, enable jails for services you want to protect. In this case it's SSH
