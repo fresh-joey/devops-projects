@@ -22,14 +22,14 @@ I used AWS to spin up a virtual server using the steps highlighted below
 
 - This command will create private and public keys and store them in the path provided on your device.
 ```console 
-$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key1
-$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key2
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key1
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key2
 ```
 
 ## Copy the public SSH Keys to the server
 
 - On a Windows machine, you might have to copy the keys manually to the server, because the ssh-copy-id command doesn't work
-```sh
+```console
 ssh-copy-id -i ~/.ssh/id_rsa_key1.pub username@server-ip
 ssh-copy-id -i ~/.ssh/id_rsa_key2.pub username@server-ip
 ```
@@ -39,7 +39,7 @@ ssh-copy-id -i ~/.ssh/id_rsa_key2.pub username@server-ip
 After you verify that the public key is on the server:
 - Open the SSH configuration file
 ```console
-$ sudo nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 - Remove the comment on the following lines
 ```console
