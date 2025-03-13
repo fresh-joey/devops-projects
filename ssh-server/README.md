@@ -21,7 +21,7 @@ I used AWS to spin up a virtual server using the steps highlighted below
 ## Create SSH Keys
 
 - This command will create private and public keys and store them in the path provided on your device.
-```console
+```console $
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key1
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key2
 ```
