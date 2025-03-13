@@ -2,10 +2,10 @@
 
 ## Requirements
 
-- A device with openssh installed
-- A remote server running linux
+- A device with OpenSSH installed
+- A remote server running Linux
 
-## Server Seup
+## Server Setup
 
 I used AWS to spin up a virtual server using the steps highlighted below
 
@@ -15,12 +15,12 @@ I used AWS to spin up a virtual server using the steps highlighted below
 - Give the server a name
 - Select Ubuntu Server as OS Image
 - Instance type: t3 micro
-- Create new key pair. Give it a name and the file will be downloaded to your machine.
-- Accept defualts for the other sections and launch instance
+- Create a new key pair. Give it a name and the file will be downloaded to your machine.
+- Accept defaults for the other sections and launch instance
 
 ## Create SSH Keys
 
-- This command will create private and public keys and stored in the path provided on your device.
+- This command will create private and public keys and store them in the path provided on your device.
 ```console
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key1
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key2
@@ -28,8 +28,8 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_key2
 
 ## Copy the public SSH Keys to the server
 
-- On a windows machine, you might have to copy the keys manually to the server, because the ssh-copy-id command doesn't work
-```console
+- On a Windows machine, you might have to copy the keys manually to the server, because the ssh-copy-id command doesn't work
+```sh
 ssh-copy-id -i ~/.ssh/id_rsa_key1.pub username@server-ip
 ssh-copy-id -i ~/.ssh/id_rsa_key2.pub username@server-ip
 ```
@@ -37,7 +37,7 @@ ssh-copy-id -i ~/.ssh/id_rsa_key2.pub username@server-ip
 - Repeat the same step for the second key.
 
 After you verify that the public key is on the server:
-- Open SSH configuration file
+- Open the SSH configuration file
 ```console
 sudo nano /etc/ssh/sshd_config
 ```
@@ -52,20 +52,20 @@ AuthorizedKeysFile .ssh/authorized_keys
 sudo systemctl restart ssh 
 ```
 
-## Connect to server with SSH keys
+## Connect to the server with SSH keys
 
 - From your terminal run the command below to connect to the server with the private key on your device.
 ```console
 ssh -i <path-to-privatekey> username@server-ip
 ```
-- Replace <path-to-keypair> with actual path to where the keypair was saved, server username and IP address
+- Replace <path-to-keypair> with the actual path to where the keypair was saved, server username and IP address
 - You should see an interface like this that shows a successful connection
 - Exit the console and connect with the second private key
 
 ![Server Image](server-landing.png)
 
 
-## Configure and connect to server with alias
+## Configure and connect to the server with alias
 
 - Create a file named config inside ~/.ssh folder
 - Add the following lines to the config file
@@ -76,7 +76,7 @@ HostName server-ip
 User user
 IdentityFile ~/.ssh/id_rsa
 ```
-- Replace server with your preferred alias
+- Replace the server with your preferred alias
 - Replace <server-ip>, <user>, and the path to the private key file
 - You can now connect to the server with
 ```console
