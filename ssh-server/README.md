@@ -39,7 +39,7 @@ ssh-copy-id -i ~/.ssh/id_rsa_key2.pub username@server-ip
 After you verify that the public key is on the server:
 - Open the SSH configuration file
 ```console
-sudo nano /etc/ssh/sshd_config
+$ sudo nano /etc/ssh/sshd_config
 ```
 - Remove the comment on the following lines
 ```console
