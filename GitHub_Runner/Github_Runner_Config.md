@@ -114,8 +114,8 @@ wait $PID
 chmod 755 runsvc.sh
 ```
 
-- Now, we create a service file. You can give it any name. <actions.runner.project.service> is what I used here
-- <actions.runner.project.service> will be the name of the service, so use a filename in line with the project or application for ease of use.
+- Now, we create a service file. You can give it any name. "actions.runner.project.service" is what I used here
+- "actions.runner.project.service" will be the name of the service, so use a filename in line with the project or application for ease of use.
 
 ```console
 sudo nano /etc/systemd/system/actions.runner.project.service
