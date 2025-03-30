@@ -129,6 +129,7 @@ Ensure to use the correct values for the variables
 ```
 
 - You should see outputs on the terminal similar to the image below
+
   ![Deploy Image](images/deploy-image.png)
 
 Project URL: <https://roadmap.sh/projects/static-site-server>
