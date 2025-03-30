@@ -64,8 +64,8 @@ ps -eo user,pid,ppid,cmd,%mem --sort=-%mem | head -n 6
 print_empty_lines 2
 
 # Additional Stats
-os_name=$(awk -F= 'NR==2 {print $2}' /etc/os-release | tr -d '"')
-os_version=$(awk -F= 'NR==4 {print $2}' /etc/os-release | tr -d '"')
+os_name=$(awk -F= 'NR==2 {print $2}' /etc/*release* | tr -d '"')
+os_version=$(awk -F= 'NR==4 {print $2}' /etc/*release* | tr -d '"')
 os_info="$os_name $os_version"
 uptime=$(uptime -p | awk '{print $2,$3,$4,$5,$6,$7}' )
 
