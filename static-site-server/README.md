@@ -11,8 +11,17 @@
 
 ### Step 1 - Setup a remote Ubuntu server on AWS
 
-### Step 2 - Connect to the server using SSH
+- Log in to AWS console
+- Search for EC2 in the services tab
+- Click on Launch Instance button
+- Input a desired name for the server
+- Next, choose a suitable linux image to use. I used Ubuntu.
+- Selcet Instance type. `shell t2.micro` is fine
 
-### Step 3 -
+### Step 2 - Install and configure Nginx
+
+### Step 3 - Prepare static files
+
+### Step 4 - Sync the files with the remote server using rsync
 
 Project URL: <https://roadmap.sh/projects/static-site-server>
