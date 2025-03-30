@@ -87,7 +87,7 @@ Specify the full path to the keypair. The default username for ubuntu image is `
 
 - Create a deployment script with `nano deploy.sh` file and put in the script below
 
-```console
+```ini
 #!/bin/bash
 
 # Variables
@@ -113,5 +113,22 @@ ssh -i "$SSH_KEY" "$REMOTE_USER@$REMOTE_HOST" "sudo chown -R ubuntu:www-data $RE
 # Print a message
 echo "Deployment complete!"
 ```
+
+Ensure to use the correct values for the variables
+
+- Make the script executable
+
+```console
+    chmod +x deploy.sh or chmod 775 deploy.sh
+```
+
+- Run the script to sync the local files to the remote server
+
+```console
+    ./deploy.sh
+```
+
+- You should see outputs on the terminal similar to the image below
+  ![Deploy Image](images/deploy-image.png)
 
 Project URL: <https://roadmap.sh/projects/static-site-server>
