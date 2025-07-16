@@ -1,6 +1,6 @@
 # Basic Dockerfile
 
-In this project, you will write a basic Dockerfile to create a Docker image. When this Docker image is run, it should print “Hello, Captain!” to the console before exiting.
+Build a basic Dockerfile to create a Docker image.
 
 ## Requirements
 
