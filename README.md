@@ -14,5 +14,6 @@ It is a community-driven platform and gives access to a lot of projects
 4. [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
 5. [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
 6. [Static Site Server](https://roadmap.sh/projects/static-site-server)
+7. [Simple Monitoring Dashboard](https://roadmap.sh/projects/simple-monitoring-dashboard)
 
 All the projects are available at <https://roadmap.sh>
