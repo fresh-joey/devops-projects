@@ -15,5 +15,6 @@ It is a community-driven platform and gives access to a lot of projects
 5. [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
 6. [Static Site Server](https://roadmap.sh/projects/static-site-server)
 7. [Simple Monitoring Dashboard](https://roadmap.sh/projects/simple-monitoring-dashboard)
+8. [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)
 
 All the projects are available at <https://roadmap.sh>
